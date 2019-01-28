@@ -46,7 +46,7 @@ class QuestionsController extends Controller
         $request->user()->questions()->create($request->only('title','body'));
 
         //return redirect('/questions');
-        return redirect()->route('question.index');
+       return redirect()->route('questions.index')->with('success',"Your question has been submitted!");
     }
 
     /**
